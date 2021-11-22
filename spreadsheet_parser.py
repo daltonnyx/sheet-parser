@@ -55,16 +55,16 @@ def __parse_image__(file, lang):
             approx = cv2.approxPolyDP(cnt, epsilon, True)
             if len(approx) == 4:
                 x,y,w,h = cv2.boundingRect(approx)
-                if w > 20 and h > 20 and w < im.shape[0] * 0.7 and h < im.shape[1] * 0.7:
-                    grid = cv2.line(masking_contour, (0, y), (masking_contour.shape[0]*2, y), color=255, thickness=1)
-                    grid = cv2.line(masking_contour, (x, 0), (x, masking_contour.shape[1]), color=255, thickness=1)
-                    grid = cv2.line(masking_contour, (0, y+h), (masking_contour.shape[0]*2, y+h), color=255, thickness=1)
-                    grid = cv2.line(masking_contour, (x+w, 0), (x+w, masking_contour.shape[1]), color=255, thickness=1) 
+                if w > 20 and h > 20:
+                    grid = cv2.line(masking_contour, (0, y), (im.shape[1], y), color=255, thickness=1)
+                    grid = cv2.line(masking_contour, (x, 0), (x, im.shape[0]), color=255, thickness=1)
+                    grid = cv2.line(masking_contour, (0, y+h), (im.shape[1], y+h), color=255, thickness=1)
+                    grid = cv2.line(masking_contour, (x+w, 0), (x+w, im.shape[0]), color=255, thickness=1) 
         cnts, hierachy = cv2.findContours(grid, cv2.RETR_LIST, cv2.CHAIN_APPROX_SIMPLE)
         for cnt in cnts:
             x,y,w,h = cv2.boundingRect(cnt)
             offset = -1
-            if w > 20 and h > 20 and w < im.shape[0] * 0.7 and h < im.shape[1] * 0.7:
+            if w > 20 and h > 20 and w < im.shape[1] * 0.95 and h < im.shape[0] * 0.95:
                 image = cv2.rectangle(im, (x-offset,y-offset), (x+w+offset, y+h+offset), color=(255,0,255), thickness=2)
                 cords = [(x-offset,y-offset), (x+w+offset, y+h+offset)]
                 cropped_im = gray[cords[0][1]:cords[1][1], cords[0][0]:cords[1][0]]
