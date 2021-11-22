@@ -1,0 +1,16 @@
+a,‘Symbol,Company,Entry Price,Last Price,% Change 4,Market Cap (B)
+1,NVDA,NVIDIA Corporation,$154.26,$191.17,19.31%,$116.33
+2,AMD,Advanced Micro Devices,$23.53,$28.46,17.32%,$30.78
+3,AAPL,Apple,$173.15,$207.16,16.42%,$976.82
+4,AMZN,Amazon.com,"$1,639.83,","$1,901.75",13.77%,$935.76
+5,F,Facebook,$161.45,$182.58,11.57%,$521.38
+6,GOOG,Alphabet,"$1,119.92","$1,256.00",10.83%,$874.70
+7,MSFT,Microsoft Corporation,$112.03,$125.01,10.38%,$959.10
+8,MTCH,Match Group,$55.38,$61.65,10.17%,$17.17
+::),ATVI,Activision Blizzard,$42.14,‘$46.75,9.86%,$35.71
+10,INTC,Intel Corporation,$52.96,$58.00,8.69%,$264.16
+W,PYPL,PayPal Holdings,$98.07),"$107.22,",8.53%,$125.68
+12,BABA,Alibaba Group:,$183.03,"‘$185.67,",1.42%,$481.29
+13,EA,Electronic Arts,$95.78,$94.00,"-1,89%",$28.21
+14,cR,salesforce.com,$163.65,$159.56,2.56%,$123.64
+15,TSLA,Tesla,$319.88,$258.00,-23.98%,$44.93
