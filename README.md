@@ -15,7 +15,7 @@ conda install -c conda-forge pillow
 python spreadsheet_parser.py [input-file] [output-file] [language]
 ```
 `input-file`: Input file, must be pdf file or image file  
-`output-file`: Output path for csv output
+`output-file`: Output path for csv output  
 `language`: content language (must be pre-install tessdata model for that language)
 
 
